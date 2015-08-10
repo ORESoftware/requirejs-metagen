@@ -1,0 +1,31 @@
+{
+  "name": "gulp-requirejs-metagen",
+  "version": "1.0.0",
+  "description": "placeholder description",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ORESoftware/gulp-requirejs-metagen.git"
+  },
+  "keywords": [
+    "metadata",
+    "generation",
+    "requirejs",
+    "require.js",
+    "gulp"
+  ],
+  "author": "oresoftware",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ORESoftware/gulp-requirejs-metagen/issues"
+  },
+  "homepage": "https://github.com/ORESoftware/gulp-requirejs-metagen",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-util": "^3.0.6",
+    "through2": "^2.0.0"
+  }
+}
