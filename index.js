@@ -1,3 +1,1 @@
-/**
- * Created by denman on 8/9/2015.
- */
+module.exports = require('./lib/metagen.js');
