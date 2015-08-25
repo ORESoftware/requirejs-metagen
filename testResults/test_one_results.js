@@ -9,12 +9,18 @@
 
 define(
     [
-        ****
+        "jsx!app/js/views/one/greeting",
+		"jsx!app/js/views/one/hell",
+		"jsx!app/js/views/one/one/h",
+		"jsx!app/js/views/one/one/two/three/data.txt"
     ],
     function(){
 
         return {
 
-            $$$$
+            "greeting": arguments[0],
+			"hell": arguments[1],
+			"one/h": arguments[2],
+			"one/two/three/data.txt": arguments[3]
         }
   });
