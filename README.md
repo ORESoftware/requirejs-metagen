@@ -92,6 +92,76 @@ define(
   });
 ```
 
+to use this library with Gulp, you can do it like so:
+
+```js
+var metagens = {
+
+    "controllers": {
+        inputFolder: './public/static/app/js/controllers/all',
+        appendThisToDependencies: 'app/js/controllers/',
+        appendThisToReturnedItems: '',
+        eliminateSharedFolder: true,
+        output: './public/static/app/js/meta/allControllers.js'
+    },
+    "templates": {
+        inputFolder: './public/static/app/templates',
+        appendThisToDependencies: 'text!app/',
+        appendThisToReturnedItems: '',
+        eliminateSharedFolder: false,
+        output: './public/static/app/js/meta/allTemplates.js'
+    },
+    "css": {
+        inputFolder: './public/static/cssx',
+        appendThisToDependencies: 'text!',
+        appendThisToReturnedItems: '',
+        eliminateSharedFolder: false,
+        output: './public/static/app/js/meta/allCSS.js'
+    },
+    "flux-constants": {
+        inputFolder: './public/static/app/js/flux/constants',
+        appendThisToDependencies: 'app/js/flux/',
+        appendThisToReturnedItems: '',
+        eliminateSharedFolder: false,
+        output: './public/static/app/js/meta/allFluxConstants.js'
+    },
+    "flux-actions": {
+        inputFolder: './public/static/app/js/flux/actions',
+        appendThisToDependencies: 'app/js/flux/',
+        appendThisToReturnedItems: '',
+        eliminateSharedFolder: false,
+        output: './public/static/app/js/meta/allFluxActions.js'
+    },
+    "all-views": {
+        inputFolder: './public/static/app/js/jsx',
+        appendThisToDependencies: 'app/js/',
+        appendThisToReturnedItems: '',
+        eliminateSharedFolder: true,
+        output: './public/static/app/js/meta/allViews.js'
+    }
+ }
+
+
+gulp.task('metagen:all', ['transpile-jsx'], function (done) {
+
+    var taskNames = Object.keys(metagens);
+    var funcs = [];
+
+    taskNames.forEach(function (name, index) {
+        funcs.push(function (cb) {
+            grm(metagens[name], function (err) {
+                cb(err);
+            });
+        });
+    });
+
+    async.parallel(funcs, function (err) {
+        done(err);
+    });
+});
+```
+
+
 
 //testing
 
