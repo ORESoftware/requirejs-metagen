@@ -8,7 +8,7 @@ use gulp to generate requirejs dependency files containing dynamic paths for you
 
 //we might have something like this on our front-end, most likely in a router:
 
-
+```javascript
    controllerRoute: function (controllerName, actionName, id) {
               
          require(["app/js/controllers/all/" + controllerName], function (cntr) {
@@ -21,9 +21,11 @@ use gulp to generate requirejs dependency files containing dynamic paths for you
                     }
                 });
        }
-
+```
 
 //so in order to require all those controllers, especially for use with r.js (the optimizer), we do:
+
+```javascript
 
 var grm = require('gulp-requirejs-metagen');
 
@@ -39,11 +41,12 @@ var controllerOpts =  {
 grm(controllerOpts, function (err) {
      //handle any unlikely errors your way
   });
-  
+```
   
 ---->  output looks like this module below:
 
 
+```javascript
 //app/js/meta//allControllers.js
 
 define(
@@ -63,11 +66,11 @@ define(
 			"users": arguments[3]
         }
   });
-  
+  ```
   
   in your front-end program I recommend doing this:
   
-  
+```javascript
   requirejs.config({
  
    paths: {
@@ -76,15 +79,17 @@ define(
    
       }
   });
+```
   
   then you can do:
   
+```javascript
   require(['#allControllers'],function(allControllers){
   
       var carController = allControllers['more/cars'];
   
   });
-
+```
 
 
 //testing

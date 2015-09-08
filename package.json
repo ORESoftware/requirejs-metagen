@@ -1,6 +1,6 @@
 {
   "name": "gulp-requirejs-metagen",
-  "version": "1.0.9",
+  "version": "1.1.2",
   "description": "require entire directories with RequireJS ---->  generate one RequireJS module that represents the folder",
   "main": "index.js",
   "scripts": {
