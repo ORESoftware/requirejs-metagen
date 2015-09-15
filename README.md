@@ -1,6 +1,7 @@
 
-# gulp-requirejs-metagen
-use gulp to generate requirejs dependency files containing dynamic paths for your controllers, views, etc
+# requirejs-metagen
+
+generate requirejs modules that represent dependencies in entire directories, useful for controllers, views, etc
 
 
 # how to use
