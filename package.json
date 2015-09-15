@@ -1,7 +1,7 @@
 {
   "name": "requirejs-metagen",
-  "version": "1.1.4",
-  "description": "require entire directories with RequireJS ---->  generate one RequireJS module that represents the folder",
+  "version": "1.1.7",
+  "description": "require entire directories with RequireJS & generate one RequireJS module that represents the folder",
   "main": "index.js",
   "scripts": {
     "test": "test"
@@ -15,7 +15,8 @@
     "generation",
     "requirejs",
     "require.js",
-    "gulp"
+    "gulp",
+    "metaprogramming"
   ],
   "author": "oresoftware",
   "license": "ISC",

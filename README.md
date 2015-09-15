@@ -6,8 +6,7 @@ use gulp to generate requirejs dependency files containing dynamic paths for you
 # how to use
 
 
-
-//we might have something like this on our front-end, most likely in a router:
+We might have something like this on our front-end, most likely in a router module:
 
 ```js
    controllerRoute: function (controllerName, actionName, id) {
@@ -25,17 +24,17 @@ use gulp to generate requirejs dependency files containing dynamic paths for you
        }
 ```
 
-//so in order to require all those controllers, especially for use with r.js (the optimizer), we do:
+//so in order to require all those controllers, especially for use with r.js (the optimizer), we can do:
 
 ```js
-var grm = require('gulp-requirejs-metagen');
+var grm = require('requirejs-metagen'); 
 
 var controllerOpts =  {
         inputFolder: './public/static/app/js/controllers/all',
         appendThisToDependencies: 'app/js/controllers/',
         appendThisToReturnedItems: '',
         eliminateSharedFolder: true,     //will drop 'all' from the front of all return items
-        output: './public/static/app/js/meta/allControllers.js' //puts all controllers into one RequireJS file/module
+        output: './public/static/app/js/meta/allControllers.js' //puts all controllers in a directory its subdirectories into one RequireJS file/module
     };
     
     
@@ -92,6 +91,16 @@ define(
   });
 ```
 
+or better yet, since those dependences are already loaded, you can use synchronous syntax easily
+
+
+```js
+var allControllers = require('#allControllers');
+var carController = allControllers['more/cars'];
+```
+
+## usage with Gulp.js:
+
 to use this library with Gulp, you can do it like so:
 
 ```js
@@ -142,7 +151,7 @@ var metagens = {
  }
 
 
-gulp.task('metagen:all', ['transpile-jsx'], function (done) {
+gulp.task('metagen:all', ['transpile-jsx'], function (done) { // we may need to transpile JSX or whatnot before running the metagen
 
     var taskNames = Object.keys(metagens);
     var funcs = [];
@@ -161,13 +170,5 @@ gulp.task('metagen:all', ['transpile-jsx'], function (done) {
 });
 ```
 
-
-
-//testing
-
-install gulp globally "npm install -g gulp"
-
-run the tests with:
-
-gulp --gulpfile test/test1.js 
+any questions you can open an issue on Github or email me at alex@oresoftware.com, thanks
 
