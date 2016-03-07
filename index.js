@@ -1,1 +1,1 @@
-module.exports = require('./lib/metagen.js');
+module.exports = require('./lib/metagen');

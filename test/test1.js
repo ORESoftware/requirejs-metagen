@@ -28,11 +28,11 @@ function runAllMetagens(done) {
 
 var metagens = {
     "example_1": {
-        inputFolder: './testData',
+        inputFolder: './test/test-data',
         appendThisToDependencies: 'append/what/you/need',
         appendThisToReturnedItems: '',
         eliminateSharedFolder: true,
-        output: './testResults/test_one_results.js'
+        output: './test/test-results/test_one_results.js'
     }
 };
 

@@ -1,0 +1,18 @@
+/**
+ *
+ *  > > >  WARNING: anything written in this file will get overwritten because this file is just metadata
+ *
+ */
+
+
+define(  /*** meta-data ***/
+    [
+        ****
+    ],
+    function(){
+
+        return {
+
+            $$$$
+        }
+  });
