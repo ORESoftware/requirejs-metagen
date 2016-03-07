@@ -1,6 +1,6 @@
 {
   "name": "requirejs-metagen",
-  "version": "1.2.01",
+  "version": "1.2.11",
   "description": "require entire directories with RequireJS & generate one RequireJS module that represents the folder",
   "main": "index.js",
   "scripts": {
