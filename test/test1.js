@@ -6,6 +6,7 @@
 //core
 var gulp = require('gulp');
 var grm = require('../index');
+const async = require('async');
 
 
 function runAllMetagens(done) {
