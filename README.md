@@ -1,4 +1,11 @@
 
+Note:
+This project has been superceded by the following project which is more generic:
+https://github.com/smartprocure/directory-metagen
+
+You can read about this effort by reading this issue:
+
+
 # requirejs-metagen
 
 generate requirejs modules that represent dependencies in entire directories, useful for controllers, views, etc
