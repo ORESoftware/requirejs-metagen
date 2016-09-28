@@ -4,11 +4,16 @@ This project has been superceded by the following project which is more generic:
 https://github.com/smartprocure/directory-metagen
 
 You can read about this effort by reading this issue:
+https://github.com/ORESoftware/requirejs-metagen/issues/1
 
 
 # requirejs-metagen
 
-generate requirejs modules that represent dependencies in entire directories, useful for controllers, views, etc
+Generate requirejs modules that represent dependencies in entire directories, useful for grouping controllers, views, etc.
+Please note that the paradigm espoused by this system goes against bundling for production. So using this methodology is not highly recommended. IMO the ideal way to build production-grade apps with RequireJS is create separate bundles for separate parent views. You load all the shared code on first page load. Then you load new code in the browser on demand for each new parent view, as the user switches views in the app.
+
+You can read about that methodology here:
+
 
 
 # how to use
