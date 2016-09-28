@@ -13,6 +13,7 @@ Generate requirejs modules that represent dependencies in entire directories, us
 Please note that the paradigm espoused by this system goes against bundling for production. So using this methodology is not highly recommended. IMO the ideal way to build production-grade apps with RequireJS is create separate bundles for separate parent views. You load all the shared code on first page load. Then you load new code in the browser on demand for each new parent view, as the user switches views in the app.
 
 You can read about that methodology here:
+Pete Hunt @OSCON - https://www.youtube.com/watch?v=VkTCL6Nqm6Y
 
 
 
